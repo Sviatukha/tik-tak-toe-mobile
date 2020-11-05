@@ -2,13 +2,13 @@
 main {
     display: flex;
     justify-content: center;
-    max-width: 520px;
-    min-width: 301px;
+    max-width: 1100px;
+   
     flex-wrap: wrap;
 }
 .game-block {
-    width: 300px;
-    height: 400px;
+    width: 900px;
+    height: 1200px;
     background-color: lightgray;
     border:  1px solid darkgray; 
     text-align: center;   
@@ -17,8 +17,8 @@ main {
     justify-content: space-evenly;    
 }
 .block {
-    width: 80px;
-    height: 80px;
+    width: 270px;
+    height: 270px;
     background-color: cornflowerblue;
     position: relative;
     cursor: pointer;
@@ -29,7 +29,7 @@ span {
 }
 .title {
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: bold;
 }
 .bl-1, .bl-4, .bl-7, .bl-2, .bl-8, .bl-5 {
@@ -46,17 +46,21 @@ span {
 }
 
 .reset {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    width: 150px;
+    height: 50px;
+    font-size: 17px;
+    border-radius: 10px;
 }
 .zero::after {
     display: block;
     content: "";
     position: absolute;
-    top:10px;
-    left: 10px;
-    width: 40px;
-    height: 40px;
-    border: 10px solid gold;
+    top:60px;
+    left: 60px;
+    width: 100px;
+    height: 100px;
+    border: 20px solid gold;
     border-radius: 50%;
 }
 .cross::before, .cross::after {
@@ -64,18 +68,23 @@ span {
     content: "";
     position: absolute;
     width: 0px;
-    height: 40px;
-    border: 5px solid red;
+    height: 150px;
+    border: 10px solid red;
 }
 .cross::after {
-    top: 10px;
-    left: 35px;
+    top: 50px;
+    right: 125px;
     transform: rotate(-45deg);
 }
 .cross::before {
-    top: 10px;
-    left: 35px;
+    top: 50px;
+    left: 120px;
     transform: rotate(45deg);
+}
+.player-move, .message{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .red {
     background-color: hotpink;
@@ -83,7 +92,7 @@ span {
 .dev {
     text-align: right;
     font-size: 10px;
-    margin-right: 5px;
+    margin-right: 20px;
 }
 @media screen and (max-width: 520px) {
   main{
