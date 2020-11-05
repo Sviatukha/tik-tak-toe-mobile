@@ -31,11 +31,13 @@ function move(event) {
         
         this.classList.add(player);
         (player === 'cross') ? arrCross.push(index) : arrZero.push(index);
+       
         if (player==='cross'){
             playerMove.textContent = 'Нолики ходят'
         } else {
         playerMove.textContent = 'Крестики ходят'
         }
+      
         if (
             (arrZero.length>2||arrCross.length>2)&&
             (checkWin(arrCross, index)||checkWin(arrZero, index))
@@ -55,7 +57,7 @@ function move(event) {
 
 
         chengePlayer();       
-              
+           
     }
     moveCount++;
     console.log(moveCount);
