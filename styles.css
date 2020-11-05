@@ -1,4 +1,4 @@
-
+gi
 main {
     display: flex;
     justify-content: center;
@@ -8,7 +8,7 @@ main {
 }
 .game-block {
     width: 900px;
-    height: 1200px;
+    height: 90%;
     background-color: lightgray;
     border:  1px solid darkgray; 
     text-align: center;   
