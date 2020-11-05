@@ -8,7 +8,7 @@ main {
 }
 .game-block {
     width: 900px;
-    height: 90%;
+    height: 100%;
     background-color: lightgray;
     border:  1px solid darkgray; 
     text-align: center;   
