@@ -54,12 +54,12 @@ function move(event) {
             }
 
 
-        chengePlayer();
-        
-        moveCount++;
-        if(moveCount===9)message.textContent='НИЧЬЯ';
-       
+        chengePlayer();       
+              
     }
+    moveCount++;
+    console.log(moveCount);
+    if(moveCount==9)message.textContent='НИЧЬЯ';
 }
 function chengePlayer(){
     if(player==='cross'){
@@ -75,7 +75,9 @@ reset.addEventListener('click', function(){
         for (let i=0; i<block.length; i++){
             block[i].addEventListener('click', move)            
         }
-    
+        moveCount = 0;
+        playerMove.textContent = '';
+        message.textContent = '';
     document.querySelector('.game-block').classList.remove('red');
 });
 function checkWin(arr, num) {
