@@ -31,9 +31,10 @@ function move(event) {
         
         this.classList.add(player);
         (player === 'cross') ? arrCross.push(index) : arrZero.push(index);
-       
+      
         if (player==='cross'){
-            playerMove.textContent = 'Нолики ходят'
+            playerMove.textContent = 'Нолики ходят';
+
         } else {
         playerMove.textContent = 'Крестики ходят'
         }
@@ -78,8 +79,8 @@ reset.addEventListener('click', function(){
             block[i].addEventListener('click', move)            
         }
         moveCount = 0;
-        playerMove.textContent = '';
-        message.textContent = '';
+        playerMove.textContent = 'Крестики ходят';
+        message.textContent = '_';
     document.querySelector('.game-block').classList.remove('red');
 });
 function checkWin(arr, num) {
@@ -91,6 +92,9 @@ function checkWin(arr, num) {
                 if (arr.indexOf(subArr[j]) !== -1) {
                     count++;
                     if (count === 3) {
+                        console.log(subArr);
+                        console.log(winCondition);
+
                         return true;
                     }
                 }

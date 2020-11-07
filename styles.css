@@ -1,11 +1,32 @@
 
-main {
-    display: flex;
-    justify-content:space-around;
-    max-width: 1100px;  
-    
+body{
+    padding: 0;
+    margin: 0;  
 }
-.game-block {
+main {  position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+      
+    background-color: lightgray;
+   background-image: url(img/victor-van-welden-kFv5tLnY8Yc-unsplash.jpg);
+    text-align: center;
+    color: #c7deff;
+    text-shadow: 7px 7px  black;
+
+}
+.game-block{
+    width: 845px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px auto;
+    background-color:#A17F30;
+    border: 20px solid #A17F30;
+    box-shadow:  25px 25px 35px 2px black;
+}
+/*.game-block {
     width: 900px;
     height: 1500px;
     background-color: lightgray;
@@ -14,42 +35,45 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;    
-}
+}*/
 .block {
     width: 270px;
     height: 270px;
-    background-color: cornflowerblue;
+    background-color: lightgray;
     position: relative;
     cursor: pointer;
+    box-shadow: inset 0px 0px 35px 2px black;
+    background-image: url(img/natural-wooden-background_24837-269.jpg) ;
+    background-repeat: no-repeat
 }
 span {
     display: inline-block;
     width: 100%;
+    margin: 30px auto;
 }
 .title {
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 80px;
     font-weight: bold;
-}
-.bl-1, .bl-4, .bl-7, .bl-2, .bl-8, .bl-5 {
-    border-right: 2px solid darkblue;
-}
-.bl-3, .bl-6, .bl-9,.bl-2, .bl-8, .bl-5{
-    border-left: 2px solid darkblue;
-}
-.bl-1, .bl-2, .bl-3, .bl-4, .bl-5, .bl-6, .bl-5 {
-    border-bottom: 2px solid darkblue;
-}
-.bl-4, .bl-5, .bl-6, .bl-7, .bl-8, .bl-9, .bl-5 {
-    border-top: 2px solid darkblue;
+    color: #ff8740;
 }
 
+.bl-1, .bl-2, .bl-3, .bl-4, .bl-5, .bl-6 {
+    margin-bottom: 10px;
+}
+.bl-2, .bl-5, .bl-8 {
+    background-position: -250px 0;
+}
+.bl-3, .bl-6, .bl-9 {
+    background-position: -350px 0;
+}
 .reset {
     margin-bottom: 30px;
     width: 250px;
     height: 70px;
     font-size: 35px;
-    border-radius: 10px;
+    border-radius: 30px;
+    background-image: url(img/images.jpg);
 }
 .zero::after {
     display: block;
@@ -81,9 +105,10 @@ span {
     transform: rotate(45deg);
 }
 .player-move, .message{
-    font-size: 35px;
+    font-size: 45px;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 30px;
 }
 .red {
     background-color: hotpink;
